@@ -6,7 +6,6 @@ repository: https://github.com/flutter/plugins/tree/main/packages/camera/camera
 issue_tracker: https://github.com/flutter/flutter/issues?q=is%3Aissue+is%3Aopen+label%3A%22p%3A+camera%22
 version: 0.11.0
 
-
 environment:
   sdk: ">=2.14.0 <3.0.0"
   flutter: ">=2.10.0"
@@ -18,8 +17,14 @@ flutter:
         default_package: camera_android
       ios:
         default_package: camera_avfoundation
+      web:
+        default_package: camera_web
 
 dependencies:
+  camera_android: ^0.10.0
+  camera_avfoundation: ^0.9.7+1
+  camera_platform_interface: ^2.2.0
+  camera_web: ^0.3.0
   flutter:
     sdk: flutter
   flutter_plugin_android_lifecycle: ^2.0.2
@@ -34,7 +39,6 @@ dev_dependencies:
   plugin_platform_interface: ^2.0.0
   video_player: ^2.0.0
 
-
 # FOR TESTING ONLY. DO NOT MERGE.
 dependency_overrides:
   camera_android:
@@ -43,3 +47,5 @@ dependency_overrides:
     path: ../../camera/camera_avfoundation
   camera_platform_interface:
     path: ../../camera/camera_platform_interface
+  camera_web:
+    path: ../../camera/camera_web
